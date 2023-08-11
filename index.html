@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Aniket Pandit ... For practice purpose only! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -23,7 +25,7 @@
                     <img src="assets/asset 1.png" alt="company-logo">
             </a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#"class="hover-links ">Product</a></li>
                     <li><a href="#"class="hover-links">Customer</a></li>
@@ -33,7 +35,9 @@
                     <li><a href="#"class="hover-links primary-button">Sign up</a></li>
                 </ul>
             </div>
-
+            <a href="#" class="nav-toggle hover-links" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -137,7 +141,7 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-img">
                 <img src="assets/asset 21.png" alt="">
             </div>
@@ -245,6 +249,13 @@
 
 
     <!-- <div class="spacer" style="height: 100vh;"></div> -->
+<script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
 
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    })
+</script>
 </body>
 </html>
